@@ -95,3 +95,47 @@ a:link, a:visited {
     width: 100%;
     height: auto;
 }
+.carousel__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.carousel__text--primary {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--color-secondary);
+    text-align: center;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+}
+.carousel__text--secondary {
+    font-size: 4rem;
+    color: var(--text-color-tertiary);
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    margin: 4.5rem 0;
+}
+.carousel__text--tertiary {
+    font-size: var(--font-primary);
+    color: var(--text-color-tertiary);
+    text-align: center;
+    margin: 0 2rem;
+}
+.special {
+    padding: 4rem 2rem;
+    background-color: var(--color-secondary);
+}
+.control {
+    position: absolute;
+    font-size: 5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-color-tertiary);
+}
+.carousel__controls-left {
+    left: 2rem;
+}
+.carousel__controls-right {
+    right: 2rem;
+}
