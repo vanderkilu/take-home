@@ -128,7 +128,8 @@ a:link, a:visited {
 }
 .control {
     position: absolute;
-    font-size: 5rem;
+    width: 5rem;
+    height: 5rem;
     top: 50%;
     transform: translateY(-50%);
     color: var(--text-color-tertiary);
