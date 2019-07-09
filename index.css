@@ -28,10 +28,10 @@ body {
 
 a:link, a:visited {
     text-decoration: none;
-    color: var(--color-secondary);
+    color: var(--text-color-tertiary);
 }
 
-/*main section*/
+/*header section*/
 
 .header {
     padding: 2rem;
@@ -61,6 +61,9 @@ a:link, a:visited {
     text-transform: uppercase;
     font-weight: 500;
 }
+.header__link:hover {
+    color: var(--color-secondary);
+}
 .header__link:not(last-child) {
     margin-right: 2rem;
 }
@@ -81,4 +84,14 @@ a:link, a:visited {
     background-color: var(--color-secondary);
     color: var(--text-color-tertiary);
     font-size: var(--font-links);
+}
+
+/*carousel section*/
+
+.carousel {
+    position: relative;
+}
+.carousel__img {
+    width: 100%;
+    height: auto;
 }
