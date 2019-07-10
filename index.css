@@ -8,11 +8,14 @@
     --color-secondary: #e65100;
     --text-color-primary: #212121;
     --text-color-secondary: #616161;
+    --text-color-faint: #bdbdbd;
     --text-color-tertiary: #ffffff;
     --font-primary: 1.5rem;
     --font-heading: 2.5rem;
     --font-links: 1.3rem;
     --bg-color--dark:#000000; 
+    --bg-color--white: #ffffff;
+    --img-border: 2px solid #e65100;
 }
 
 html {
@@ -29,6 +32,18 @@ body {
 a:link, a:visited {
     text-decoration: none;
     color: var(--text-color-tertiary);
+}
+.btn {
+    border: none;
+    border-radius: 1px;
+}
+.btn-primary {
+    padding: 1rem 5rem;
+    background-color: var(--bg-color--dark);
+    color: var(--text-color-tertiary);
+    border-radius: 1px;
+    font-size: var(--font-primary);
+    text-transform: uppercase;
 }
 
 /*header section*/
@@ -74,10 +89,6 @@ a:link, a:visited {
 }
 .input:focus {
     outline: none;
-}
-.btn {
-    border: none;
-    border-radius: 1px;
 }
 .btn-search {
     padding: 0.8rem 4rem;
@@ -152,4 +163,56 @@ a:link, a:visited {
     border-radius: 50%;
     background-color: #f5f5f5;
     margin-right: 0.4rem;
+}
+
+/* Reason section */
+
+.reason {
+    background-color: var(--bg-color--white);
+    padding: 5rem 10rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 5rem;
+}
+.reason__images {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.reason__images--big {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border: var(--img-border);
+}
+.reason__images--row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.reason__images--item {
+    width: 10%;
+    height: auto;
+    border: var(--img-border);
+    flex: 1;
+}
+.reason__images--item:not(:last-child) {
+    margin-right: 0.1rem;
+}
+.reason__heading {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+.reason__text--faint {
+    font-style: italic;
+    font-size: var(--font-primary);
+    color: var(--text-color-faint);
+}
+.reason__text {
+    font-size: var(--font-primary);
+    color: var(--text-color-primary);
+    margin: 4rem 0;
+    line-height: 2;
 }
