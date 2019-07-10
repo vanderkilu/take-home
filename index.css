@@ -140,3 +140,16 @@ a:link, a:visited {
 .carousel__controls-right {
     right: 2rem;
 }
+.carousel__indicators {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+}
+.indicator {
+    display: inline-flex;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    margin-right: 0.4rem;
+}
