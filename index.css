@@ -310,7 +310,19 @@ a:link, a:visited {
     grid-row: 1 / span 2;
 }
 .item--heading {
-    font-size: 1.8rem;
-    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-transform: capitalize;
     margin-bottom: 1rem;
+}
+.services__main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 6rem;
+}
+.item--icon-skew {
+    transform: rotate(45deg);
+    margin-bottom: 4rem;
+}
+.skew {
+    transform: rotate(-45deg);
 }
