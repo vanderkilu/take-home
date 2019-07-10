@@ -15,7 +15,9 @@
     --font-links: 1.3rem;
     --bg-color--dark:#000000; 
     --bg-color--white: #ffffff;
+    --bg-color--grey: #e0e0e0;
     --img-border: 2px solid #e65100;
+    --line-height:2; 
 }
 
 html {
@@ -44,6 +46,33 @@ a:link, a:visited {
     border-radius: 1px;
     font-size: var(--font-primary);
     text-transform: uppercase;
+}
+.underline {
+    display: block;
+    height: 2px;
+    background-color: var(--color-secondary);
+}
+.underline--short {
+    width: 8rem;
+    margin-top: 2rem;
+    margin-bottom: 0.2rem;
+}
+.underline--long {
+    width: 16rem;
+}
+.heading {
+    font-size: var(--font-heading);
+    text-align: center;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+}
+.text-center {
+    text-align: center !important;
 }
 
 /*header section*/
@@ -169,7 +198,7 @@ a:link, a:visited {
 
 .reason {
     background-color: var(--bg-color--white);
-    padding: 5rem 10rem;
+    padding: 8rem 10rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 5rem;
@@ -214,5 +243,49 @@ a:link, a:visited {
     font-size: var(--font-primary);
     color: var(--text-color-primary);
     margin: 4rem 0;
-    line-height: 2;
+    line-height: var(--line-height);
+}
+
+/*services section*/
+.services {
+    padding: 8rem 10rem;
+    background-color: var(--bg-color--grey);
+}
+.services__text {
+    font-size: var(--font-primary);
+    color: var(--text-color-primary);
+    text-align: left;
+    line-height: var(--line-height);
+}
+.services__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 5rem;
+    margin-top: 5rem;
+}
+.services__left-info {
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    position: relative;
+}
+.services__left-info::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 0.3rem;
+    background-color: var(--color-secondary);
+}
+.services__img {
+    width: 100%;
+    height: auto;
+}
+.services__main {
+    grid-column: 1 / -1;
+}
+.services__heading {
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
 }
