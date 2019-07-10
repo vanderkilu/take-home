@@ -251,7 +251,7 @@ a:link, a:visited {
     padding: 8rem 10rem;
     background-color: var(--bg-color--grey);
 }
-.services__text {
+.services__text, .item--text {
     font-size: var(--font-primary);
     color: var(--text-color-primary);
     text-align: left;
@@ -260,7 +260,7 @@ a:link, a:visited {
 .services__content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 5rem;
+    grid-column-gap: 8rem;
     margin-top: 5rem;
 }
 .services__left-info {
@@ -287,5 +287,30 @@ a:link, a:visited {
 .services__heading {
     font-size: 1.8rem;
     text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+.services__right--item {
+    display: grid;
+    grid-template-columns: 6rem 1fr;
+    grid-column-gap: 1rem;
+}
+
+.services__right--item:not(:last-child) {
+    margin-bottom: 5rem;
+}
+.item--icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--color-secondary);
+    font-size: var(--font-primary);
+    color: var(--text-color-tertiary);
+    grid-row: 1 / span 2;
+}
+.item--heading {
+    font-size: 1.8rem;
+    text-transform: uppercase;
     margin-bottom: 1rem;
 }
