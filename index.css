@@ -27,6 +27,7 @@ html {
 
 body {
     font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-color--white);
 }
 
 /*utilites*/
@@ -325,4 +326,50 @@ a:link, a:visited {
 }
 .skew {
     transform: rotate(-45deg);
+}
+
+/* event section */
+
+.events {
+    padding: 8rem 0;
+}
+.events__main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.events__card {
+    position: relative;
+}
+.events__img {
+    width: 100%;
+    height: auto;
+}
+.events__top {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+}
+.events__bottom {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+}
+.events__top--number, 
+.events__bottom--type,
+.events__bottom--arrow {
+    font-size: 2rem;
+    color: var(--bg-color--white);
+    text-transform: uppercase;
+}
+.events__top--number {
+    margin-right: 2rem;
+}
+.events__bottom--type {
+    font-size: var(--font-primary);
+}
+.events__top--country {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    background-color: var(--color-secondary);
+    color: var(--bg-color--white);
 }
