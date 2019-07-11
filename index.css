@@ -75,6 +75,9 @@ a:link, a:visited {
 .text-center {
     text-align: center !important;
 }
+.color-white {
+    color: var(--text-color-tertiary);
+}
 
 /*header section*/
 
@@ -388,4 +391,40 @@ a:link, a:visited {
     height: auto;
     border: 1px solid var(--text-color-faint);
     padding: 1.2rem;
+}
+
+/*team section*/
+.team {
+    padding: 8rem 10rem;
+    background-image: url('images/tb.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.team__imgs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 4rem;
+}
+.team__detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.team__detail > * {
+    margin: 0.5rem;
+}
+.team__img {
+    width: 100%;
+    height: auto;
+    border-radius: 1px;
+}
+.team__name {
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+.team__title {
+    text-transform: capitalize;
+    font-size: var(--font-primary);
+    color: var(--text-color-tertiary);
 }
