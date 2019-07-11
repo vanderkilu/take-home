@@ -428,3 +428,54 @@ a:link, a:visited {
     font-size: var(--font-primary);
     color: var(--text-color-tertiary);
 }
+
+/*contact section*/
+.contact {
+    padding: 8rem 10rem;
+}
+.contact__detail {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.input-group {
+    margin-bottom: 2rem;
+}
+.contact__input:not([type="password"]) {
+    padding: 1rem 0;
+    width: 100%;
+    border: 1.5px solid var(--text-color-primary);
+}
+.contact__input--special {
+    padding: 1rem 0;
+    border: 1.5px solid var(--text-color-primary);
+}
+label {
+    font-size: var(--font-primary);
+    color: var(--text-color-primary);
+}
+::-webkit-input-placeholder {
+    font-family: inherit;
+    padding-left: 2rem;
+}
+.input-group--special {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 2rem;
+}
+.lbpass {
+    grid-column: 1 / -1;
+}
+.input-radio {
+    font-size: var(--font-primary);
+}
+.gender {
+    margin-right: 2rem;
+}
+.contact__radio {
+    margin-right: 0.5rem;
+}
+.contact__icon--img {
+    width: 100%;
+    height: auto;
+    transform: translateY(-5rem);
+}
