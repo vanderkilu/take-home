@@ -441,12 +441,12 @@ a:link, a:visited {
     margin-bottom: 2rem;
 }
 .contact__input:not([type="password"]) {
-    padding: 1rem 0;
+    padding: 1rem 2rem;
     width: 100%;
     border: 1.5px solid var(--text-color-primary);
 }
 .contact__input--special {
-    padding: 1rem 0;
+    padding: 1rem 2rem;
     border: 1.5px solid var(--text-color-primary);
 }
 label {
@@ -478,4 +478,39 @@ label {
     width: 100%;
     height: auto;
     transform: translateY(-5rem);
+}
+
+/*subscribe section*/
+.subscribe {
+    padding: 8rem 15rem;
+    background-image: url('images/s5.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.subscribe__text {
+    font-size: var(--font-primary);
+    line-height: var(--line-height);
+    color: var(--text-color-tertiary);
+    text-align: center;
+}
+.subscribe__form {
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0;
+}
+.subscribe__input {
+    padding: 1rem 2rem;
+    border: none;
+    margin-right: 2rem;
+    width: 30%;
+}
+.subscribe__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    color: var(--text-color-tertiary);
+}
+.subscribe__social > * {
+    margin-right: 1rem;
 }
