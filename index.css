@@ -373,3 +373,19 @@ a:link, a:visited {
     background-color: var(--color-secondary);
     color: var(--bg-color--white);
 }
+
+/*gallery section*/
+.gallery {
+    padding: 8rem 10rem;
+}
+.gallery__imgs {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 4rem;
+}
+.gallery__img {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--text-color-faint);
+    padding: 1.2rem;
+}
