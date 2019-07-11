@@ -514,3 +514,99 @@ label {
 .subscribe__social > * {
     margin-right: 1rem;
 }
+
+/*map section*/
+.map {
+    padding: 8rem 10rem;
+    background-color: var(--text-color-primary);
+}
+.map__contact {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+.map__contact--item {
+    display: flex;
+    align-items: center;
+}
+.map__text {
+    font-size: var(--font-primary);
+    color: var(--text-color-tertiary);
+}
+.fa-phone,
+.fa-envelope-o,
+.fa-map-marker {
+    color: var(--color-secondary);
+    margin-right: 1rem;
+    font-size: var(--font-heading);
+}
+hr {
+    border: 1px solid#424242;
+    margin: 5rem 0;
+}
+.map__detail {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-column-gap: 2rem;
+}
+.map__about {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 2rem;
+}
+.map__heading {
+    font-size: 2rem;
+    color: var(--color-secondary);
+    margin-bottom: 2rem;
+}
+.map__heading--special {
+    grid-column: 1 / -1;
+}
+.map__text--special {
+    margin-top: 2rem;
+}
+.map__img {
+    width: 100%;
+    height: auto;
+}
+.map__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.map__link {
+    font-size: var(--font-primary);
+    color: var(--text-color-tertiary);
+    list-style: none;
+}
+.map__link::before {
+    content: '\203A';
+    margin-right: 0.5rem;
+    font-size: var(--font-primary);
+    color: var(--color-secondary);
+}
+.map__link:not(:last-child){
+    margin-bottom: 3rem;
+}
+.map__navs {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 2rem;
+}
+.map__nav {
+    font-size: var(--font-primary);
+    color: var(--text-color-tertiary);
+    padding: 1rem;
+    border: 1px solid var(--text-color-tertiary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer__copyright {
+    text-align: center;
+    color: var(--text-color-tertiary);
+    font-size: var(--font-primary);
+    padding: 2rem;
+    background-color: var(--bg-color--dark);
+}
