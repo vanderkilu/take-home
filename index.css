@@ -653,9 +653,7 @@ hr {
         height: 2px;
         background-color: var(--text-color-tertiary);
         margin: 0.3rem 0;
-    }
-    .header__links {
-        display: none;
+        cursor: pointer;
     }
     .header {
         padding: 2rem;
@@ -664,11 +662,22 @@ hr {
         grid-row-gap: 2rem;
         align-items: center;
     }
+    .header__links {
+        justify-self: end;
+        grid-column: 1 /-1;
+        display: none;
+        justify-content: center;
+        align-items: flex-end;
+        flex-direction: column;
+    }
     .header__search{
         grid-column: 1 /-1;
     }
 
     /*carousel*/
+    .carousel__img {
+        height: 100%;
+    }
     .carousel__text {
         width: 100%;
     }

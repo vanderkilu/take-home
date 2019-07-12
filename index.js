@@ -5,7 +5,10 @@ const imageElements = Array.from(document.querySelectorAll('.carousel__img'))
 const indicatorElements = Array.from(document.querySelectorAll('.indicator'))
 const bigImage = document.querySelector('.reason__images--big')
 const smallImages = Array.from(document.querySelectorAll('.reason__images--item'))
+const mobileHumburger = document.querySelector('.mobile__hamburger')
+const headerLink = document.querySelector('.header__links')
 let start = 1
+let show = false
 
 //attaching listeners
 leftCtrl.addEventListener('click', showSlide(-1))
@@ -14,7 +17,13 @@ indicatorElements.forEach((indicator, i) =>  {
     indicator.addEventListener('click', currentSlide(i+1))
 }) 
 smallImages.forEach(s => s.addEventListener('click', replaceImage(s)))
+mobileHumburger.addEventListener('click', toggleLinkShow)
 
+function toggleLinkShow() {
+    const classValue = show ? 'none' : 'flex'
+    headerLink.style.display = classValue
+    show = !show
+}
 
 function replaceImage(smallImage) {
     return ()=> {
