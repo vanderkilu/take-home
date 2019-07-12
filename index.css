@@ -30,7 +30,25 @@ body {
 }
 
 /*utilites*/
-
+.hide {
+    display: none;
+}
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@-webkit-keyframes fade {
+    from {opacity: .8} 
+    to {opacity: 1}
+}
+  
+@keyframes fade {
+    from {opacity: .8} 
+    to {opacity: 1}
+}
 a:link, a:visited {
     text-decoration: none;
     color: var(--text-color-tertiary);
@@ -179,6 +197,7 @@ a:link, a:visited {
     top: 50%;
     transform: translateY(-50%);
     color: var(--text-color-tertiary);
+    cursor: pointer;
 }
 .carousel__controls-left {
     left: 2rem;
