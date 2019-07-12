@@ -1,30 +1,38 @@
 
 const leftCtrl = document.querySelector('.carousel__controls-left')
 const rightCtrl =  document.querySelector('.carousel__controls-right')
-const images = document.querySelectorAll('.carousel__img')
+const imageElements = Array.from(document.querySelectorAll('.carousel__img'))
+const indicatorElements = Array.from(document.querySelectorAll('.indicator'))
 
-showSlide(0)()
+
 
 leftCtrl.addEventListener('click', showSlide(-1))
 rightCtrl.addEventListener('click', showSlide(1))
+indicatorElements.forEach((indicator, i) =>  {
+    indicator.addEventListener('click', currentSlide(i+1))
+}) 
+
+let start = 1
 
 function showSlide(incrementor) {
-    return slide(incrementor)
+    return () => slide(start += incrementor)
+}
+
+function currentSlide(index) {
+    return ()=> slide(start = index)
 }
 
 function slide(incrementor) {
-    let start = 1
-    const imageElements = Array.from(images)
 
-    return ()=> {
-        start += incrementor
-        if (start > imageElements.length) start = 1
-        if (start < 1) start = imageElements.length
-        imageElements.forEach((imageElement)=> {
-            imageElement.classList.add('hide')
-        })
-        imageElements[start-1].classList.remove('hide')
-        
-    }
-    
+    if (incrementor > imageElements.length) start = 1
+    if (incrementor < 1) start = imageElements.length
+    imageElements.forEach((imageElement)=> {
+        imageElement.classList.add('hide')
+    })
+    indicatorElements.forEach((indicator) =>  {
+        indicator.classList.remove('active')
+    })
+    imageElements[start-1].classList.remove('hide')
+    indicatorElements[start-1].classList.add('active')
 }
+showSlide(0)()
